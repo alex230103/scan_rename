@@ -40,7 +40,7 @@ def get_file():
             
             number = text.find("390-")
             if number > -1:
-                name = text[number: number+10]
+                name = str(text[number: number+10]).replace('\n', '')
                 print(name + " успешно распознан. ")
                 move_ttn(file_name, name)
             else:
