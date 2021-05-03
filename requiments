@@ -1,8 +1,8 @@
 certifi==2020.12.5
-numpy @ file:///D:/bld/numpy_1604946157939/work
-olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+numpy #@ file:///D:/bld/numpy_1604946157939/work
+olefile #@ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
 pdf2image==1.14.0
-Pillow @ file:///D:/bld/pillow_1604748918199/work
-pytesseract @ file:///home/conda/feedstock_root/build_artifacts/pytesseract_1605866581960/work
+Pillow #@ file:///D:/bld/pillow_1604748918199/work
+pytesseract #@ file:///home/conda/feedstock_root/build_artifacts/pytesseract_1605866581960/work
 pyzbar==0.1.8
 wincertstore==0.2

@@ -4,6 +4,7 @@ import os
 import shutil
 from pdf2image import convert_from_path
 from ocr import get_img
+from PIL import Image
 
 config = r'--oem 3 --psm 6'
 
@@ -48,5 +49,25 @@ def get_file():
                 shutil.move("pdf/" + file_name, "bad/" + file_name)
 
 
+def list_files():
+    files_path = os.listdir('img/')
+
+    for file_name in files_path:
+        img= Image.open('img/' + file_name) 
+        img.show()
+        data = decode(img)
+
+        if data:
+            name = data[0].data.decode('utf-8')
+            print(name + " успешно распознан. ")
+            #move_ttn(file_name, name)
+            print("Success")
+        else:
+            print ("Error read img")
+
+
+
+
+
 if __name__ == "__main__":
-    get_file()
+    list_files()
